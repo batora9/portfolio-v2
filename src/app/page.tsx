@@ -1,10 +1,13 @@
-import clsx from "clsx";
+import React from 'react';
 import Image from "next/image";
+import Link from "next/link";
+import { Header } from "../components/Header";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <Header />
       <div className={styles.hero}>
         <div className={styles.heroImage}></div>
       </div>
