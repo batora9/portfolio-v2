@@ -1,9 +1,12 @@
 'use client';
 import React, { useEffect, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +23,27 @@ export const Header = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-      <p className={styles.topText}>ばとらの部屋</p>
+      <p className={styles.top}>ばとらの部屋</p>
+      <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
+        <ul>
+          <Link href="/" className={styles.link}>HOME</Link>
+          <Link href="#" className={styles.link}>PROFILE</Link>
+          <Link href="#" className={styles.link}>SKILLS</Link>
+          <Link href="#" className={styles.link}>ARTICLES</Link>
+          <Link href="#" className={styles.link}>WORKS</Link>
+        </ul>
+      </nav>
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
     </header>
   );
-}
+};
 
 export default Header;
