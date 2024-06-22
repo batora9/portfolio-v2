@@ -22,7 +22,7 @@ export const Header = () => {
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-      <h1>My Website</h1>
+      <p className={styles.topText}>ばとらの部屋</p>
     </header>
   );
 }
