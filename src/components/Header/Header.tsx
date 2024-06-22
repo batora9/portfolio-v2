@@ -33,10 +33,10 @@ export const Header = () => {
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul>
           <Link href="/" className={styles.link}>HOME</Link>
-          <Link href="#" className={styles.link}>PROFILE</Link>
-          <Link href="#" className={styles.link}>SKILLS</Link>
-          <Link href="#" className={styles.link}>ARTICLES</Link>
-          <Link href="#" className={styles.link}>WORKS</Link>
+          <Link href="#profile" className={styles.link}>PROFILE</Link>
+          <Link href="#skills" className={styles.link}>SKILLS</Link>
+          <Link href="#articles" className={styles.link}>ARTICLES</Link>
+          <Link href="#works" className={styles.link}>WORKS</Link>
         </ul>
       </nav>
       <div className={styles.hamburger} onClick={toggleMenu}>
