@@ -4,7 +4,7 @@ export const TypingText = () => {
   return (
     <main className={styles.main}>
       <section className={styles.mainsection}>
-        <span>Typing string is cool!</span>
+        <span>Software / Web Engineer</span>
       </section>
     </main>
   );

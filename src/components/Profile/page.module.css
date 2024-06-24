@@ -1,0 +1,33 @@
+.container {
+  padding: 0 5%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.contents {
+  display: flex;
+  margin-left: 5%;
+  justify-content: space-evenly;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.text {
+  text-align: center;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+.profileText {
+  margin: 8px 0;
+}
