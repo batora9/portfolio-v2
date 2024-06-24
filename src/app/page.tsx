@@ -1,9 +1,9 @@
 import React from 'react';
-import Image from "next/image";
-import Link from "next/link";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { Profile } from "../components/Profile";
 import styles from "./page.module.css";
+import { MdOutlineExpandMore } from "react-icons/md";
 
 
 export default function Home() {
@@ -12,12 +12,12 @@ export default function Home() {
       <Header />
       <div className={styles.hero}>
         <div className={styles.heroImage}></div>
+        <MdOutlineExpandMore className={styles.scrollIcon} />
       </div>
       <div className={styles.contents}>
         <div className={styles.profile} id="profile">
           <div className={styles.profileContent}>
-            <h2>Profile</h2>
-            <p>Webエンジニアを目指している学生です。</p>
+            <Profile />
           </div>
         </div>
         <div className={styles.skillsList} id="skills">
