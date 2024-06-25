@@ -1,12 +1,17 @@
+import React from 'react';
 import styles from './page.module.css';
 
 export const TypingText = () => {
+  const texts = [
+    'Software / Web Engineer'
+  ];
+
   return (
-    <main className={styles.main}>
-      <section className={styles.mainsection}>
-        <span>Software / Web Engineer</span>
-      </section>
-    </main>
+    <section className={styles.main}>
+      <span>
+        {texts[0]}
+      </span>
+    </section>
   );
 }
 
