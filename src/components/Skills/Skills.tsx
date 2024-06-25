@@ -1,4 +1,4 @@
-import styles from './page.module.css';
+import styles from './Skills.module.css';
 
 export function Skills() {
   return (

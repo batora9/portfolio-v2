@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
-import styles from "./page.module.css";
+import styles from "./Header.module.css";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);

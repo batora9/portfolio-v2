@@ -1,4 +1,4 @@
-import styles from './page.module.css';
+import styles from './Articles.module.css';
 
 export function Articles() {
   return (

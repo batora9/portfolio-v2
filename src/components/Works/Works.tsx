@@ -1,4 +1,4 @@
-import styles from './page.module.css';
+import styles from './Works.module.css';
 
 export function Works() {
   return (
