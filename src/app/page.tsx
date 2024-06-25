@@ -2,7 +2,9 @@ import React from 'react';
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Profile } from "../components/Profile";
-import { TypingText } from '../components/typing-text';
+import { Skills } from "../components/Skills";
+import { Articles } from "../components/Articles";
+import { Works } from "../components/Works";
 import styles from "./page.module.css";
 import { MdOutlineExpandMore } from "react-icons/md";
 import { SiX, SiGithub } from 'react-icons/si';
@@ -17,36 +19,24 @@ export default function Home() {
         <img src="./images/hero.png" alt="hero" className={styles.heroImage}/>
         <div className={styles.heroItems}>
           <img src="./images/batora.png" alt="profile" className={styles.heroIcon} />
+          <div className={styles.typing}>
+            <span>Software / Web Engineer</span>
+          </div>
         </div>
         <MdOutlineExpandMore className={styles.scrollIcon} />
       </div>
       <div className={styles.contents}>
         <div className={styles.profile} id="profile">
-          <div className={styles.profileContent}>
-            <Profile />
-          </div>
+          <Profile />
         </div>
         <div className={styles.skillsList} id="skills">
-          <div className={styles.skillListContent}>
-            <h2>Skills</h2>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>Next.js</li>
-            </ul>
-          </div>
+          <Skills />
         </div>
         <div className={styles.articlesList} id="articles">
-          <div className={styles.articlesListContent}>
-            <h2>Articles</h2>
-          </div>
+          <Articles />
         </div>
         <div className={styles.worksList} id="works">
-          <div className={styles.worksListContent}>
-            <h2>Works</h2>
-          </div>
+          <Works />
         </div>
       </div>
       <Footer />
