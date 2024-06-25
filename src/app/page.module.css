@@ -62,8 +62,8 @@
 }
 
 .heroImage {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   filter: blur(4px) brightness(0.7);
   object-fit: cover;
 }
@@ -75,14 +75,33 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  align-items: center;
 }
 
+.heroItems div {
+  margin: 20px 0;
+}
 
 .heroIcon {
   z-index: 1;
   height: 100px;
   width: 100px;
+}
+
+.mediaIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 10px;
+  color: #fff;
+}
+
+.icon:hover {
+  opacity: 0.8;
 }
 
 .scrollIcon {

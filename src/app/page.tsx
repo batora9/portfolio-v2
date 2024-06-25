@@ -10,7 +10,6 @@ import { MdOutlineExpandMore } from "react-icons/md";
 import { SiX, SiGithub } from 'react-icons/si';
 import Link from 'next/link';
 
-
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -21,6 +20,14 @@ export default function Home() {
           <img src="./images/batora.png" alt="profile" className={styles.heroIcon} />
           <div className={styles.typing}>
             <span>Software / Web Engineer</span>
+          </div>
+          <div className={styles.mediaIcons}>
+            <Link href="https://github.com/batora9">
+              <SiGithub className={styles.icon} />
+            </Link>
+            <Link href="https://twitter.com/265">
+              <SiX className={styles.icon} />
+            </Link>
           </div>
         </div>
         <MdOutlineExpandMore className={styles.scrollIcon} />
