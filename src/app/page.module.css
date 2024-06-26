@@ -5,27 +5,12 @@
 }
 
 .typing span {
-  display: inline-block;
   font: bold 200% Consolas, Monaco, monospace;
   color: #fff;
   overflow: hidden;
-  white-space: nowrap;
   font-weight: 500;
   border-right: 2px solid transparent;
   text-shadow: 0 0 10px #000;
-  animation: typing 11s steps(23) infinite, caret 1.5s steps(1) infinite;
-}
-
-@keyframes typing {
-  0%, 50% {
-    width: 0;
-  }
-  25%, 75% {
-    width: 23ch;
-  }
-  100% {
-    width: 0;
-  }
 }
 
 @keyframes caret {
@@ -77,20 +62,16 @@
   text-align: center;
 }
 
-.heroItems div {
-  margin: 20px 0;
-}
-
 .heroIcon {
-  z-index: 1;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
 }
 
 .mediaIcons {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .icon {

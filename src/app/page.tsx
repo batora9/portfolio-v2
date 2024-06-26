@@ -9,6 +9,7 @@ import styles from "./page.module.css";
 import { MdOutlineExpandMore } from "react-icons/md";
 import { SiX, SiGithub } from 'react-icons/si';
 import Link from 'next/link';
+import TypingAnimation from '@/components/TypingAnimation/TypingAnimation';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <div className={styles.heroItems}>
           <img src="./images/batora.png" alt="profile" className={styles.heroIcon} />
           <div className={styles.typing}>
-            <span>Software / Web Engineer</span>
+            <TypingAnimation texts={['Hello, I am Batora.','Welcome to my website!', 'Software / Web Engineer.']} />
           </div>
           <div className={styles.mediaIcons}>
             <Link href="https://github.com/batora9">
