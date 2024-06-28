@@ -4,7 +4,6 @@ import path from "path";
 
 interface Props {
   params: {
-    id: string;
     slug: string;
   };
   searchParams: {};
@@ -15,9 +14,7 @@ export async function generateStaticParams() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
-      params: {
-        slug: fileName.replace(/\.md$/, ""),
-      },
+      slug: fileName.replace(/\.md$/, ""),
     };
   });
 }
