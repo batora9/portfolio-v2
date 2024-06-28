@@ -9,7 +9,6 @@ interface Post {
   };
 }
 
-
 export default async function WorksPage() {
   const posts = await getMarkdowns('docs/works');
   return (

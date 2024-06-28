@@ -4,25 +4,22 @@ import path from "path";
 
 interface Props {
   params: {
+    id: string;
     slug: string;
   };
+  searchParams: {};
 }
 
 export async function generateStaticParams() {
   const postsDirectory = path.join(process.cwd(), "docs/works");
-  const posts = fs.readdirSync(postsDirectory);
-  const params = [];
-  for(const post of posts) {
-    const filePath = path.join(postsDirectory, post);
-    const fileContents = fs.readFileSync(filePath, "utf8");
-    const { data } = matter(fileContents);
-    params.push({
+  const fileNames = fs.readdirSync(postsDirectory);
+  return fileNames.map((fileName) => {
+    return {
       params: {
-        slug: data.slug,
+        slug: fileName.replace(/\.md$/, ""),
       },
-    });
-  }
-  return params;
+    };
+  });
 }
 
 export default async function WorkPost({ params }: Props) {
