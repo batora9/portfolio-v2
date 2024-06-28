@@ -1,0 +1,15 @@
+.link {
+  padding: 0.5em 3em;
+  background-color: #414141;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  transition: background-color 0.3s ease;
+  font-size: 1.25rem;
+  text-decoration: none;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+}
+
+.link:hover {
+  background-color: #ffffff;
+  color: #414141;
+}
