@@ -23,10 +23,11 @@ export async function generateStaticParams() {
 }
 
 export default async function WorkPost({ params }: Props) {
+  const { slug } = params;
   const postsDirectory = path.join(process.cwd(), "docs/works");
-  const filePath = path.join(postsDirectory, `${params.slug}.md`);
+  const filePath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(filePath, "utf8");
-  const { content, data } = matter(fileContents);
+  const { data, content } = matter(fileContents);
 
   return (
     <div>
