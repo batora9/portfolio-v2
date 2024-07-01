@@ -29,7 +29,9 @@ export const Header = () => {
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-      <p className={styles.top}>ばとらの部屋</p>
+      <Link href="/" className={styles.logolink}>
+        <p className={styles.top}>ばとらの部屋</p>
+      </Link>
       <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
         <ul>
           <Link href="/" className={styles.link}>HOME</Link>

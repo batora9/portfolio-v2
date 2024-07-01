@@ -15,3 +15,10 @@
   margin-left: 5%;
   justify-content: space-evenly;
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 100px 0;
+}

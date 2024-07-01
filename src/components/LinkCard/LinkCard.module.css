@@ -1,0 +1,23 @@
+.link {
+  text-decoration: none;
+}
+
+.link:hover .card {
+  transform: translateY(-5px);
+}
+
+.card {
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}

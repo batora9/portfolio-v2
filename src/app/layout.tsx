@@ -5,8 +5,11 @@ import "./globals.css";
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
-  title: "ばとらの部屋",
-  description: "batoraのポートフォリオサイト",
+  title: {
+    template: "%s | ばとらの部屋",
+    default: "ばとらの部屋",
+  },
+  description: "ばとらのポートフォリオサイト",
 };
 
 export default function RootLayout({
