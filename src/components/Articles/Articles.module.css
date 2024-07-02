@@ -12,13 +12,20 @@
 
 .contents {
   display: flex;
-  margin-left: 5%;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 5%;
   margin: 100px 0;
+}
+
+@media (max-width: 1000px) {
+  .cards {
+    flex-direction: column;
+    gap: 0;
+  }
 }

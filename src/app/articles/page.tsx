@@ -1,4 +1,8 @@
+import { LinkCard } from '@/components/LinkCard';
+import styles from './page.module.css';
+import { SubHeader } from '@/components/SubHeader';
 import { getMarkdowns } from "../../../utils/markdown";
+import { Footer } from '@/components/Footer';
 
 interface Post {
   slug: string;
@@ -12,15 +16,24 @@ interface Post {
 export default async function ArticlesPage() {
   const posts = await getMarkdowns('docs/articles');
   return (
-    <div>
-      <h1>Articles</h1>
-      <ul>
-        {posts.map((post: Post) => (
-          <li key={post.slug}>
-            <a href={`/articles/${post.slug}`}>{post.frontmatter.title}</a>
-          </li>
-        ))}
-      </ul>
+    <div className={styles.main}>
+      <SubHeader />
+      <div className={styles.container}>
+        <h1>Articles</h1>
+        <div className={styles.articlesList}>
+          {posts.map((post: Post) => (
+            <LinkCard
+              key={post.slug}
+              href={`/articles/${post.slug}`}
+              title={post.frontmatter.title}
+              description={post.frontmatter.description}
+              imageSrc={post.frontmatter.image}
+              imageAlt={post.frontmatter.title}
+            />
+          ))}
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

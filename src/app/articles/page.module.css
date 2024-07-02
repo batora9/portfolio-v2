@@ -1,0 +1,15 @@
+.main {
+  margin-top: 106px; 
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.articlesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
