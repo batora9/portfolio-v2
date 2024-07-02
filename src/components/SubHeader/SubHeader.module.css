@@ -1,0 +1,97 @@
+/* components/Header.module.css */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 86px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  padding: 10px 0;
+  background-color: #f9f9f9;
+  color: #000;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  padding: 0;
+}
+
+.nav ul li {
+  display: inline;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #333; */
+    background: linear-gradient(180deg,rgba(0,0,0,.6) 0,transparent);
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+  }
+
+  .nav.scrolled {
+    background-color: #f9f9f9;
+    color: #000;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav ul li {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.logolink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.top {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
