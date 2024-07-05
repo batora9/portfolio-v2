@@ -1,4 +1,11 @@
 import { getMarkdowns } from "../../../utils/markdown";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '開発一覧',
+  description:
+    'ばとらの開発一覧ページです。いままでに開発したものを掲載しています。',
+};
 
 interface Post {
   slug: string;
