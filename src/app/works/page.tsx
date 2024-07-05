@@ -1,4 +1,8 @@
+import { LinkCard } from '@/components/LinkCard';
+import styles from './page.module.css';
+import { SubHeader } from '@/components/SubHeader';
 import { getMarkdowns } from "../../../utils/markdown";
+import { Footer } from '@/components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -19,15 +23,24 @@ interface Post {
 export default async function WorksPage() {
   const posts = await getMarkdowns('docs/works');
   return (
-    <div>
-      <h1>Works</h1>
-      <ul>
-        {posts.map((post: Post) => (
-          <li key={post.slug}>
-            <a href={`/works/${post.slug}`}>{post.frontmatter.title}</a>
-          </li>
-        ))}
-      </ul>
+    <div className={styles.main}>
+      <SubHeader />
+      <div className={styles.container}>
+        <h1>Works</h1>
+        <div className={styles.articlesList}>
+          {posts.map((post: Post) => (
+            <LinkCard
+              key={post.slug}
+              href={`/works/${post.slug}`}
+              title={post.frontmatter.title}
+              description={post.frontmatter.description}
+              imageSrc={post.frontmatter.image}
+              imageAlt={post.frontmatter.title}
+            />
+          ))}
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
