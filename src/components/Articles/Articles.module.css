@@ -15,12 +15,13 @@
   justify-content: center;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5%;
-  margin: 100px 0;
+@media (min-width: 1000px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+  }
 }
 
 @media (max-width: 1000px) {
