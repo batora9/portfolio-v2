@@ -5,7 +5,7 @@ import styles from './Works.module.css';
 
 export async function Works() {
   const posts = await getMarkdowns('docs/works');
-  const recentPosts = posts.slice(0, 3);
+  const recentPosts = posts.sort((a, b) => a.frontmatter.update_at < b.frontmatter.update_at ? 1 : -1).slice(0, 3);
   return (
     <div className={styles.container}>
       <p className={styles.title}>Recent Works</p>
