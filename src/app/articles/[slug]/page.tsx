@@ -1,20 +1,24 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
-import remarkHtml from "remark-html";
-import { Metadata } from "next";
+import './global.css'
+import styles from './page.module.css'
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkHtml from 'remark-html';
+import { Metadata } from 'next';
 import remarkGfm from 'remark-gfm';
 // import remarkMath from 'remark-math';
 // import rehypeKatex from 'rehype-katex';
-import rehypePrettyCode from "rehype-pretty-code";
+import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeStringify from 'rehype-stringify';
 import remarkRehype from 'remark-rehype';
 import rehypeSlug from 'rehype-slug';
+import { SubHeader } from '@/components/SubHeader';
+import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: 'icon', url: '/favicon.ico' }],
 };
 
 interface Props {
@@ -26,11 +30,11 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const postsDirectory = path.join(process.cwd(), "docs/articles");
+  const postsDirectory = path.join(process.cwd(), 'docs/articles');
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
-      slug: fileName.replace(/\.md$/, ""),
+      slug: fileName.replace(/\.md$/, ''),
     };
   });
 }
@@ -39,10 +43,10 @@ export async function generateStaticParams() {
 export default async function WorkPost( { params } : Props ) {
   const { slug } = params;
   // ファイルのパスを取得
-  const filePath = path.join(process.cwd(), "docs/articles", `${slug}.md`);
+  const filePath = path.join(process.cwd(), 'docs/articles', `${slug}.md`);
 
   // ファイルの中身を取得
-  const fileContents = fs.readFileSync(filePath, "utf8");
+  const fileContents = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContents);
   const title = data.title; // 記事のタイトル
   const createdAt = data.createdAt; // 記事の作成日
@@ -66,20 +70,21 @@ export default async function WorkPost( { params } : Props ) {
   const contentHtml = processedContent.toString(); // マークダウンをHTMLに変換
 
   return (
-    <div className="flex bg-black flex-col min-h-screen">
-      <div className="bg-black px-6 py-12 pb-16 pt-24 lg:px-8">
-        <div className="mx-auto max-w-3xl text-base leading-7 text-white">
-          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+      <div className={styles.main}>
+        <SubHeader />
+        <div className={styles.container}>
+        <div>
+          <p className={styles.title}>
             {title}
           </p>
-          <p className="mt-2 text-sm text-gray-400">作成日 {createdAt_ja} / 最終更新日 {updatedAt_ja}</p>
+          <p className={styles.date}>作成日 {createdAt_ja} / 最終更新日 {updatedAt_ja}</p>
         </div>
         <div
-          className="prose prose-lg text-white mx-auto max-w-3xl mt-8"
           id='markdown-body'
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
+        </div>
+        <Footer />
       </div>
-    </div>
   );
 }

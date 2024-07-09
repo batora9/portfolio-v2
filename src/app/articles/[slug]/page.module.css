@@ -1,26 +1,9 @@
+.main {
+  margin-top: 106px; 
+}
+
 .container {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
+  max-width: 1160px;
   margin: 0 auto;
+  padding: 0 5%;
 }
-
-.mainContent {
-  width: 75%;
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.post {
-  background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
-  padding: 2rem;
-}
-
-.sidebar {
-  width: 25%;
-}
-  
