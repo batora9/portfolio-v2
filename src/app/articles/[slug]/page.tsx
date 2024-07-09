@@ -40,7 +40,7 @@ export async function generateStaticParams() {
 }
 
 // ブログ記事ページ
-export default async function WorkPost( { params } : Props ) {
+export default async function ArticlePost( { params } : Props ) {
   const { slug } = params;
   // ファイルのパスを取得
   const filePath = path.join(process.cwd(), 'docs/articles', `${slug}.md`);

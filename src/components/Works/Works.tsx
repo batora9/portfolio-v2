@@ -13,7 +13,7 @@ export async function Works() {
         {recentPosts.map((post) => (
           <LinkCard
             key={post.slug}
-            href={`/articles/${post.slug}`}
+            href={`/works/${post.slug}`}
             title={post.frontmatter.title}
             description={post.frontmatter.description}
             imageSrc={post.frontmatter.image}
