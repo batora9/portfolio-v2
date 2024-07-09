@@ -10,7 +10,7 @@ image: "./frames/frame.png"
 
 ## 見出し
 入力例
-```
+```text
 # 見出し1です
 ## 見出し2です
 ### 見出し3です
@@ -25,7 +25,7 @@ image: "./frames/frame.png"
 
 ## 太字・斜体・訂正線
 入力例
-```
+```text
 これは **太字** です。
 これは __太字__ です。
 これは *斜体* です。
@@ -44,7 +44,7 @@ image: "./frames/frame.png"
 
 タイトルはリンク上にマウスホバーすることで表示される
 入力例
-```
+```text
 [GitHub](https://github.com "タイトル")
 ```
 実行結果<br>
@@ -53,7 +53,7 @@ image: "./frames/frame.png"
 ## 引用
 
 入力例
-```
+```text
 > これは引用です。
 > これは引用です。これは引用です。
 ```
@@ -65,8 +65,8 @@ image: "./frames/frame.png"
 ## コードブロック
 
 入力例
-~~~
-```c:sample.c
+~~~text
+```c
  void hello()
   {
       console.log("Hello World!");
@@ -75,7 +75,7 @@ image: "./frames/frame.png"
 ~~~
 
 実行結果
-```c:sample.c
+```c
  void hello()
   {
       console.log("Hello World!");
@@ -84,7 +84,7 @@ image: "./frames/frame.png"
 
 `diff_`とつけることでコードの比較ができる
 入力例
-~~~
+~~~text
 ```diff_c
   - console.log("Hello");
   + console.log("World!");
@@ -115,7 +115,7 @@ image: "./frames/frame.png"
 ## チェックリスト
 
 入力例
-```
+```text
 - [ ] これからやるタスク
 - [x] 完了したタスク
 ```
@@ -127,7 +127,7 @@ image: "./frames/frame.png"
 ## 箇条書き
 
 入力例
-```
+```text
 - リスト１
 - リスト２
 
@@ -150,7 +150,7 @@ image: "./frames/frame.png"
 同じ数字でも自動的に番号付けされる
 
 入力例
-```
+```text
 1. 番号リストA
 1. 番号リストB
   1. 番号リストB-1
@@ -168,7 +168,7 @@ image: "./frames/frame.png"
 ## 折りたたみ
 
 入力例
-```
+```text
 <details><summary>サンプルコード</summary>
 
 ```rb
@@ -195,7 +195,7 @@ $$\frac{1}{2} $$
 ## 注釈
 
 入力例
-```
+```text
 テキスト[^1]
 [^1]: 注釈の内容
 ```
@@ -207,7 +207,7 @@ $$\frac{1}{2} $$
 ## テーブル
 
 入力例
-```
+```text
 |  TH  |  TH  |
 | ---- | ---- |
 |  TD  |  TD  |
@@ -224,7 +224,7 @@ $$\frac{1}{2} $$
 ## 水平線
 
 入力例
-```
+```text
 ***
 
 *****
