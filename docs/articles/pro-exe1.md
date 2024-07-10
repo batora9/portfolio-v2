@@ -1,9 +1,8 @@
 ---
 title: プログラミング演習I
-createdAt: "2024-03-03"
-updatedAt: "2024-03-03"
-description: "プログラミング演習の授業でのメモ"
-image: "./frames/frame.png"
+createdAt: '2024-03-03'
+updatedAt: '2024-03-03'
+description: 'プログラミング演習の授業でのメモ'
 ---
 
 ただの自己満メモ

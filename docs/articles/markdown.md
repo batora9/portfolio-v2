@@ -1,9 +1,8 @@
 ---
 title: Markdown記法まとめ
-createdAt: "2024-03-04"
-updatedAt: "2024-03-05"
-description: "てきとうに記法をまとめました"
-image: "./frames/frame.png"
+createdAt: '2024-03-04'
+updatedAt: '2024-03-05'
+description: 'てきとうに記法をまとめました'
 ---
 
 # Markdown記法まとめ
