@@ -5,7 +5,7 @@ import styles from './Articles.module.css';
 
 export async function Articles() {
   const posts = await getMarkdowns('docs/articles');
-  const recentPosts = posts.sort((a, b) => a.frontmatter.updatedAt < b.frontmatter.updatedAt ? 1 : -1).slice(0, 3);
+  const recentPosts = posts.sort((a, b) => a.frontmatter.updatedAt < b.frontmatter.updatedAt ? 1 : -1).slice(0, 4);
   return (
     <div className={styles.container}>
       <p className={styles.title}>Recent Articles</p>

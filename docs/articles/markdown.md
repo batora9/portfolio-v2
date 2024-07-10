@@ -1,9 +1,11 @@
 ---
-title: Markdown記法まとめ
+title: ブログで使うMarkdown記法まとめ
 createdAt: '2024-03-04'
-updatedAt: '2024-03-05'
-description: 'てきとうに記法をまとめました'
+updatedAt: '2024-07-10'
+description: 'batoran.comで今後使う/使いたいMarkdown記法をまとめました。'
 ---
+
+> 一部CSSで未実装な部分もあります(今後実装予定WIP)
 
 # Markdown記法まとめ
 
