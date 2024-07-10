@@ -7,14 +7,18 @@
   transform: translateY(-5px);
 }
 
+.cardPadding {
+  padding: 8px;
+}
+
 .card {
-  flex-direction: column;
   height: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: 0.3s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: grid;
+  align-items: center;
 }
 
 .image {
@@ -33,10 +37,36 @@
   white-space: nowrap;
 }
 
+.colorBlack {
+  color: #000;
+}
+
+.addUnderline {
+  text-decoration: underline;
+}
+
+.createdAt {
+  font-size: 12px;
+  color: #666;
+}
+
 .description {
+  color: #000;
   margin: 8px;
   font-size: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.addMargin {
+  margin: 8px 8px 0;
+}
+
+.removeMargin {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
 }
