@@ -1,11 +1,11 @@
-import { getMarkdowns } from "../../../utils/markdown";
+import { getMarkdowns } from '../../../utils/markdown';
 import { LinkButton } from '../LinkButton';
 import { LinkCard } from '../LinkCard';
 import styles from './Articles.module.css';
 
 export async function Articles() {
   const posts = await getMarkdowns('docs/articles');
-  const recentPosts = posts.sort((a, b) => a.frontmatter.update_at < b.frontmatter.update_at ? 1 : -1).slice(0, 3);
+  const recentPosts = posts.sort((a, b) => a.frontmatter.updatedAt < b.frontmatter.updatedAt ? 1 : -1).slice(0, 3);
   return (
     <div className={styles.container}>
       <p className={styles.title}>Recent Articles</p>
@@ -13,8 +13,10 @@ export async function Articles() {
         {recentPosts.map((post) => (
           <LinkCard
             key={post.slug}
+            variant='article-link'
             href={`/articles/${post.slug}`}
             title={post.frontmatter.title}
+            createdAt={post.frontmatter.createdAt}
             description={post.frontmatter.description}
             imageSrc={post.frontmatter.image}
             imageAlt={post.frontmatter.title}
@@ -22,7 +24,7 @@ export async function Articles() {
         ))}
       </div>
       <div className={styles.contents}>
-        <LinkButton href="/articles/">
+        <LinkButton href='/articles/'>
           More Details
         </LinkButton>
       </div>

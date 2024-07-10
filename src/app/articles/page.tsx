@@ -22,7 +22,7 @@ interface Post {
 
 export default async function ArticlesPage() {
   const posts = await getMarkdowns('docs/articles');
-  posts.sort((a, b) => a.frontmatter.update_at < b.frontmatter.update_at ? 1 : -1);
+  posts.sort((a, b) => a.frontmatter.updatedAt < b.frontmatter.updatedAt ? 1 : -1);
   return (
     <div className={styles.main}>
       <SubHeader />
@@ -32,8 +32,10 @@ export default async function ArticlesPage() {
           {posts.map((post: Post) => (
             <LinkCard
               key={post.slug}
+              variant='article-link'
               href={`/articles/${post.slug}`}
               title={post.frontmatter.title}
+              createdAt={post.frontmatter.createdAt}
               description={post.frontmatter.description}
               imageSrc={post.frontmatter.image}
               imageAlt={post.frontmatter.title}
