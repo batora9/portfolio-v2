@@ -55,9 +55,13 @@
   margin: 8px;
   font-size: 16px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2行まで表示 */
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
 }
+
 
 .addMargin {
   margin: 8px 8px 0;
