@@ -11,7 +11,5 @@
 }
 
 .contents {
-  display: flex;
-  margin-left: 5%;
-  justify-content: space-evenly;
+  margin: 0 5%;
 }
