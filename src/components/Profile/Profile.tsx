@@ -1,3 +1,4 @@
+import { MediaCard } from '../MediaCard';
 import styles from './Profile.module.css';
 
 export function Profile() {
@@ -13,6 +14,13 @@ export function Profile() {
         関東在住で20歳の情報系の学科所属の大学生です。 趣味はプログラミング、ボウリング、野球、ゲーム、車などなど...
         最近では、主にWindowsアプリケーションやWebアプリケーションを作ったり、アルゴリズムや競技プログラミングを触る程度に勉強しています。
       </div>
+      <MediaCard
+        href='https://maximum.vc'
+        title='Maximum'
+        description='埼玉大学プログラミングサークル「Maximum」の公式サイトです、活動内容や知見を情報発信していきます'
+        imageSrc='/icons/maximum.ico'
+        imageAlt='Maximum'
+      />
     </div>
   );
 }
