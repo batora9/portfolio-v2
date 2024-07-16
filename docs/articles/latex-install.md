@@ -2,7 +2,7 @@
 title: Windows上で簡易的にLaTeXの環境を構築する
 createdAt: '2024-03-04'
 updatedAt: '2024-07-11'
-description: 'batoran.comで今後使う/使いたいMarkdown記法をまとめました。'
+description: 'batoran.comで今後使う/使いたいMarkdown記法をまとめました'
 ---
 
 # はじめに
