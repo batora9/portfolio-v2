@@ -14,6 +14,7 @@ import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeStringify from 'rehype-stringify';
 import remarkRehype from 'remark-rehype';
 import rehypeSlug from 'rehype-slug';
+import { BreadCrumb } from '@/components/BreadCrumb';
 import { SubHeader } from '@/components/SubHeader';
 import { Footer } from '@/components/Footer';
 
@@ -74,6 +75,7 @@ export default async function WorkPost( { params } : Props ) {
         <SubHeader />
         <div className={styles.container}>
         <div>
+          <BreadCrumb items={[{ to: '/', label: 'Home' }, { to: '/works', label: '開発一覧' }, { to: `/works/${slug}`, label: title }]} />
           <p className={styles.title}>
             {title}
           </p>

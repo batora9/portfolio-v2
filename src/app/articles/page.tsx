@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import { SubHeader } from '@/components/SubHeader';
 import { getMarkdowns } from "../../../utils/markdown";
 import { Footer } from '@/components/Footer';
+import { BreadCrumb } from '@/components/BreadCrumb';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default async function ArticlesPage() {
     <div className={styles.main}>
       <SubHeader />
       <div className={styles.container}>
+        <BreadCrumb items={[{ to: '/', label: 'Home' }, { to: '/articles', label: '記事一覧' }]} />
         <h1>Articles</h1>
         <div className={styles.articlesList}>
           {posts.map((post: Post) => (
