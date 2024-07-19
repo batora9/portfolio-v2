@@ -9,7 +9,7 @@ description: 'Visual Studio CodeでMarkdown形式のファイルでスニペッ�
 
 ブログをMarkdownで書くようになってからVSCode上でMarkdownを編集することが多くなりました。Markdown記事を書くにあたって下のようなタイトルや記事作成日などのデータを書きます。
 
-![Markdownデータ](/images/markdown-1.png)
+![Markdownデータ](/images/markdown-snippets/markdown-1.png)
 
 このデータは記事を作るときに毎回書くため、スニペット（コードのかたまり）を使って一発で入力できるようにしようということです。
 
@@ -45,13 +45,13 @@ VSCode上の歯車からユーザースニペットを選択します。
 
 `ユーザースニペット` > `新しいグローバルスニペットファイル...`を選択します。
 
-![ユーザースニペット作成](/images/markdown-2.png)
+![ユーザースニペット作成](/images/markdown-snippets/markdown-2.png)
 
 スニペットファイル名の入力欄がでたら`(任意の名前).code-snippets`というファイル名を作成します。  
 
 今回は、`markdown.vscode-snippets.code-snippets`という名前で作成しました。
 
-![ユーザースニペット作成](/images/markdown-3.png)
+![ユーザースニペット作成](/images/markdown-snippets/markdown-3.png)
 
 ※このファイルはMarkdown以外の様々な言語に対してのユーザースニペットを作成することができます
 
@@ -85,12 +85,12 @@ https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
 このように正常に追加されました。
 
-![ユーザースニペット作成](/images/markdown-4.png)
+![ユーザースニペット作成](/images/markdown-snippets/markdown-4.png)
 
 あとはMarkdownファイル上で、登録したprefixを入力するとコードを一発で書くことができます！
 
-![ユーザースニペット](/images/markdown-5.png)
+![ユーザースニペット](/images/markdown-snippets/markdown-5.png)
 
 ↓↓↓
 
-![ユーザースニペット](/images/markdown-6.png)
+![ユーザースニペット](/images/markdown-snippets/markdown-6.png)
