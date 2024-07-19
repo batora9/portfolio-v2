@@ -3,7 +3,7 @@ title: Live CPS Checker
 createdAt: '2018-10-14'
 updatedAt: '2024-03-04'
 description: '1秒間に何回クリックしているかのCPS(Clicks per Second)をリアルタイムで測定するアプリを作りました。'
-image: '/images/realtimeCPS.png'
+image: '/images/live-cps-checker/realtimeCPS.png'
 ---
 
 1秒間に何回クリックしているかのCPS(Clicks per Second)をリアルタイムで測定するアプリをC#で作りました。
@@ -20,6 +20,6 @@ FPSゲームをしているときにマウスクリックの連打の速さが�
 外観はこんな感じです。左上からCPS、合計クリック数、CPSハイスコアとなってます。  
 名前がRealtime CPSになっているのはご愛敬…（リアルタイムは和製英語なので）
 
-![realtimeCPS](/images/realtimeCPS.png)
+![realtimeCPS](/images/live-cps-checker/realtimeCPS.png)
 
 ソースコードは[Github](https://github.com/batora9/realtimeCPS)から
