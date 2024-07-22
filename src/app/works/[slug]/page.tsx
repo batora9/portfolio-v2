@@ -75,7 +75,13 @@ export default async function WorkPost( { params } : Props ) {
         <SubHeader />
         <div className={styles.container}>
         <div>
-          <BreadCrumb items={[{ to: '/', label: 'Home' }, { to: '/works', label: '開発一覧' }, { to: `/works/${slug}`, label: title }]} />
+          <BreadCrumb
+            items={[
+              { to: '/', label: 'Home', style: 'node' },
+              { to: '/works', label: 'Works', style: 'node' },
+              { to: `/works/${slug}`, label: title, style: 'leaf' }
+            ]}
+          />
           <p className={styles.title}>
             {title}
           </p>

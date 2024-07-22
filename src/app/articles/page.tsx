@@ -28,7 +28,12 @@ export default async function ArticlesPage() {
     <div className={styles.main}>
       <SubHeader />
       <div className={styles.container}>
-        <BreadCrumb items={[{ to: '/', label: 'Home' }, { to: '/articles', label: '記事一覧' }]} />
+        <BreadCrumb
+          items={[
+            { to: '/', label: 'Home', style: 'node' },
+            { to: '/articles', label: '記事一覧', style: 'leaf' },
+          ]}
+        />
         <h1>Articles</h1>
         <div className={styles.articlesList}>
           {posts.map((post: Post) => (
