@@ -17,8 +17,8 @@
   border-radius: 5px;
   transition: 0.3s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .image {
