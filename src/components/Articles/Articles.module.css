@@ -27,8 +27,6 @@
 
 @media (max-width: 1000px) {
   .cards {
-    display: grid;
     margin: 40px 0;
-    gap: 20px;
   }
 }
