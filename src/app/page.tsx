@@ -26,7 +26,7 @@ export default function Home() {
             <Link href="https://github.com/batora9">
               <SiGithub className={styles.icon} />
             </Link>
-            <Link href="https://twitter.com/265">
+            <Link href="https://twitter.com/ismc">
               <SiX className={styles.icon} />
             </Link>
           </div>
