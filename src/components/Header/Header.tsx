@@ -42,7 +42,7 @@ export const Header = () => {
         </ul>
       </nav>
       <div className={styles.hamburger} onClick={toggleMenu}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
+        {menuOpen ? <FaTimes className={styles.colorWhite} /> : <FaBars />}
       </div>
     </header>
   );
