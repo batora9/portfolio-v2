@@ -23,7 +23,8 @@ interface Post {
 
 export default async function ArticlesPage() {
   const posts = await getMarkdowns('docs/articles');
-  posts.sort((a, b) => a.frontmatter.updatedAt < b.frontmatter.updatedAt ? 1 : -1);
+  // Sort by createdAt
+  posts.sort((a, b) => a.frontmatter.createdAt < b.frontmatter.createdAt ? 1 : -1);
   return (
     <div className={styles.main}>
       <SubHeader />

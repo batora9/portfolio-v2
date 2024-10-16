@@ -1,8 +1,13 @@
+import clsx from "clsx";
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
-const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], weight: ["400"] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const notoSansJP = Noto_Sans_JP({
+  subsets: ['latin'],
+  variable: '--font-notosansjp',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={notoSansJP.className}>{children}</body>
+      <body className={clsx(notoSansJP.variable, inter.variable)}>{children}</body>
     </html>
   );
 }

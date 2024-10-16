@@ -7,4 +7,5 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  font-family: var(--font-inter), var(--font-notosansjp), sans-serif;
 }
