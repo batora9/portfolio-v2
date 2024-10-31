@@ -6,7 +6,7 @@ description: 'Web研究会で扱ったTODOアプリの改良を行いました'
 image: '/images/simple-todo-app/top.png'
 ---
 
-スクリーンショット：
+---
 
 ![hero](/images/simple-todo-app/hero.png)
 
