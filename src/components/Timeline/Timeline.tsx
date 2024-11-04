@@ -10,6 +10,12 @@ export const Timeline = () => {
       icon: "/icons/icpc.png",
     },
     {
+      title: "プログラミングサークルMaximum",
+      date: "2024-04",
+      description: "2024年度サークル副会長とWeb研究会の講師を務める",
+      icon: "/icons/maximum.png",
+    },
+    {
       title: "ICPC 2023 国内予選に出場",
       date: "2023-07",
       description: "touch_hogehogeで出場し結果は174位",
