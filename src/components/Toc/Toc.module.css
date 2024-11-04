@@ -6,15 +6,14 @@
 }
 
 .title {
-  font-size: 1.25rem; /* Tailwind's text-xl */
+  font-size: 1.25rem;
   border-left-width: 4px;
-  border-left-color: var(--secondary-color); /* Assuming you have a CSS variable for the secondary color */
+  border-left-color: var(--secondary-color);
   padding-left: 0.25rem;
 }
 
 .toc {
   padding-left: 0;
   padding-bottom: 2rem;
-  font-size: 1rem; /* Tailwind's text-base */
+  font-size: 1rem;
 }
-  
