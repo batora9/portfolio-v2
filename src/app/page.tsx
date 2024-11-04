@@ -5,6 +5,7 @@ import { Profile } from "../components/Profile";
 import { Skills } from "../components/Skills";
 import { Articles } from "../components/Articles";
 import { Works } from "../components/Works";
+import { Timeline } from "../components/Timeline";
 import styles from "./page.module.css";
 import { MdOutlineExpandMore } from "react-icons/md";
 import { SiX, SiGithub } from 'react-icons/si';
@@ -45,6 +46,9 @@ export default function Home() {
         </div>
         <div className={styles.worksList} id="works">
           <Works />
+        </div>
+        <div className={styles.timeLine} id="timeline">
+          <Timeline />
         </div>
       </div>
       <Footer />
