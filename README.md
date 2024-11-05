@@ -1,6 +1,6 @@
 # ばとらのポートフォリオ
 
-https://batran.com
+https://batoran.com
 
 ## 技術スタック
 
