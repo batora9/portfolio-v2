@@ -22,9 +22,9 @@ export const Timeline = () => {
       icon: "/icons/icpc.png",
     },
     {
-      title: "埼玉大学",
+      title: "埼玉大学に進学",
       date: "2023-04",
-      description: "埼玉大学工学部情報工学科に進学",
+      description: "埼玉大学工学部情報工学科",
       icon: "/icons/saitama-u.png",
     },
     {
