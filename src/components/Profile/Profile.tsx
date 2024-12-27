@@ -19,17 +19,11 @@ export function Profile() {
         <div className={styles.MediaLink}>
           <MediaCard
             href='https://maximum.vc'
-            title='Maximum'
-            description='埼玉大学プログラミングサークル「Maximum」の公式サイトです、活動内容や知見を情報発信していきます'
-            imageSrc='/icons/maximum.ico'
-            imageAlt='Maximum'
+            style='centering'
           />
           <MediaCard
             href='https://atcoder.jp/users/batora'
-            title='batora - AtCoder'
-            description='AtCoder is a programming contest site for anyone from beginners to experts. We hold weekly programming contests online.'
-            imageSrc='/icons/atcoder.png'
-            imageAlt='AtCoder'
+            style='centering'
           />
         </div>
       </div>
