@@ -19,7 +19,6 @@ export const MediaCard: React.FC<CardProps> = async ({
   href,
   style,
 }) => {
-  console.log("aaaaaaa");
   // https://ogp-fetcher.batoran.com からogp情報をjson形式で取得
   const ogpUrl = `https://ogp-fetcher.batoran.com/?url=${href}`;
   const ogpResponse = await fetch(ogpUrl);
@@ -34,7 +33,7 @@ export const MediaCard: React.FC<CardProps> = async ({
           <p className={styles.href}>{href}</p>
         </div>
         <img 
-          src={ogp.favicon || ogp.image}
+          src={style === 'centering' ? ogp.favicon || ogp.image : ogp.image}
           className={styles.image}
         />
       </div>
