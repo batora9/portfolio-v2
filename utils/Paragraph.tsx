@@ -6,7 +6,6 @@ interface Props {
 }
 
 export const Paragraph = ({ children }: Props) => {
-  console.log("bbbbb");
   if (isValidElement(children) && children.type === 'a') {
     // もしpタグchildの要素がaタグで、かつ子要素が1つだけの場合
     // (リスト内のリンクの場合は除外)
