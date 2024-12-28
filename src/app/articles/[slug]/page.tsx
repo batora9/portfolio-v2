@@ -8,6 +8,7 @@ import remarkParse from 'remark-parse';
 import remarkHtml from 'remark-html';
 import { Metadata } from 'next';
 import remarkGfm from 'remark-gfm';
+import rehypeReact from 'rehype-react';
 // import remarkMath from 'remark-math';
 // import rehypeKatex from 'rehype-katex';
 import rehypePrettyCode from 'rehype-pretty-code';
@@ -17,6 +18,9 @@ import rehypeSlug from 'rehype-slug';
 import { BreadCrumb } from '@/components/BreadCrumb';
 import { SubHeader } from '@/components/SubHeader';
 import { Footer } from '@/components/Footer';
+import React from 'react';
+import { Paragraph } from '../../../../utils/Paragraph';
+import rehypeParse from 'rehype-parse';
 
 export const metadata: Metadata = {
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
@@ -42,7 +46,7 @@ export async function generateStaticParams() {
 
 // ブログ記事ページ
 export default async function ArticlePost( { params } : Props ) {
-  const { slug } = params;
+  const { slug } = await params;
   // ファイルのパスを取得
   const filePath = path.join(process.cwd(), 'docs/articles', `${slug}.md`);
 
@@ -64,8 +68,19 @@ export default async function ArticlePost( { params } : Props ) {
     // .use(remarkMath)
     .use(remarkHtml)
     .use(remarkRehype)
+
     .use(rehypeSlug)
     .use(rehypePrettyCode)
+    .use(rehypeParse
+      , {fragment: true}
+    )
+    .use(rehypeReact, {
+      Fragment: React.Fragment,
+      createElement: React.createElement,
+      components: {
+        p: Paragraph,
+      },
+    })
     .use(rehypeStringify)
     .process(content);
   const contentHtml = processedContent.toString(); // マークダウンをHTMLに変換

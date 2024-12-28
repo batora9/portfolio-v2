@@ -19,6 +19,7 @@ export const MediaCard: React.FC<CardProps> = async ({
   href,
   style,
 }) => {
+  console.log("aaaaaaa");
   // https://ogp-fetcher.batoran.com からogp情報をjson形式で取得
   const ogpUrl = `https://ogp-fetcher.batoran.com/?url=${href}`;
   const ogpResponse = await fetch(ogpUrl);
