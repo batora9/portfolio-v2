@@ -33,7 +33,7 @@ export const MediaCard: React.FC<CardProps> = async ({
           <p className={styles.href}>{href}</p>
         </div>
         <img 
-          src={style === 'centering' ? ogp.favicon || ogp.image : ogp.image}
+          src={style === 'centering' ? ogp.favicon || ogp.image : ogp.image || ogp.favicon}
           className={styles.image}
         />
       </div>
