@@ -100,6 +100,8 @@ const imageMatch = meta.match(/<meta property="og:image" content="(.*?)"/);
 
 自作した`MediaCard`コンポーネントのコードは省略()
 
+## unifiedについて
+
 このブログサイトはMarkdownをHTMLに変換する際に`unified`の`remark`, `rehype`を使っています。
 
 <https://unifiedjs.com/>
@@ -116,7 +118,11 @@ const imageMatch = meta.match(/<meta property="og:image" content="(.*?)"/);
 
 といったように、MarkdownからHTMLに変換する際にスタイルを適用したい場合や、カスタムプラグインを作りたい場合は、どの段階で処理をするかを考える必要があります。
 
+## rehypeReactを使う
+
 今回は、`<a>`タグを`<MediaCard>`コンポーネントに変換するために、HTMLをReactに変換できる`rehypeReact`を使います。
+
+<https://www.npmjs.com/package/rehype-react>
 
 ```tsx
 .use(rehypeReact, {
