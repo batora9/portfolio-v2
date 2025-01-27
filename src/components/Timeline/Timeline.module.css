@@ -33,7 +33,7 @@
   justify-content: center;
   border-radius: 50%;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #f9f9f9;
   margin-right: 15px; /* アイコンとコンテンツの間にスペースを追加 */
 }
 
@@ -63,7 +63,7 @@
 
 @media (min-width: 768px) {
   .item {
-    margin-left: 20px;
+    margin-left: 5%;
     padding: 20px 0;
   }
 

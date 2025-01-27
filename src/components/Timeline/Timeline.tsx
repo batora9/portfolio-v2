@@ -6,20 +6,20 @@ export const Timeline = () => {
     {
       title: "ICPC 2024 国内予選に出場",
       date: "2024-07",
-      description: "MAXIMUM TUNE 6RRで出場し結果は298位",
+      description: "チームMAXIMUM TUNE 6RRで出場し結果は298位",
       icon: "/icons/icpc.png",
-    },
-    {
-      title: "プログラミングサークルMaximum",
-      date: "2024-04",
-      description: "2024年度サークル副会長とWeb研究会の講師を務める",
-      icon: "/icons/maximum.png",
     },
     {
       title: "ICPC 2023 国内予選に出場",
       date: "2023-07",
-      description: "touch_hogehogeで出場し結果は174位",
+      description: "チームtouch_hogehogeで出場し結果は174位",
       icon: "/icons/icpc.png",
+    },
+    {
+      title: "プログラミングサークルMaximumに入会",
+      date: "2023-05",
+      description: "2024年度サークル副会長とWeb研究会の講師を務める",
+      icon: "/icons/maximum.png",
     },
     {
       title: "埼玉大学に進学",
