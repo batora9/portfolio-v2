@@ -38,7 +38,7 @@ export const Header = () => {
           <Link href="#profile" className={styles.link}>PROFILE</Link>
           <Link href="#skills" className={styles.link}>SKILLS</Link>
           <Link href="#articles" className={styles.link}>ARTICLES</Link>
-          <Link href="#works" className={styles.link}>WORKS</Link>
+          <Link href="mailto:batora.dev@gmail.com" className={styles.link}>CONTACT</Link>
         </ul>
       </nav>
       <div className={styles.hamburger} onClick={toggleMenu}>
