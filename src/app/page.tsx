@@ -44,9 +44,6 @@ export default function Home() {
         <div className={styles.articlesList} id="articles">
           <Articles />
         </div>
-        <div className={styles.worksList} id="works">
-          <Works />
-        </div>
         <div className={styles.timeLine} id="timeline">
           <Timeline />
         </div>
