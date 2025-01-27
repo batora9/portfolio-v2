@@ -4,7 +4,6 @@ import styles from './Profile.module.css';
 export function Profile() {
   return (
     <div className={styles.container}>
-      <p className={styles.title}>Profile</p>
       <div className={styles.contents}>
         <div className={styles.text}>
           <p className={styles.name}>ばとら / Batora</p>
