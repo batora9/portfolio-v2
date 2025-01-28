@@ -11,6 +11,8 @@
   max-width: 96px;
   max-height: 96px;
   background-color: transparent;
+  margin-left: auto;
+  margin: 0 !important;
 }
 
 .card {
@@ -22,12 +24,16 @@
   transition: 0.3s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .content {
   padding: 0 16px;
+  flex: 1;
+  min-width: 0;
 }
 
 .centering {
@@ -49,13 +55,15 @@
   font-size: 14px;
   color: #666;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .href {
   margin: 8px 0;
   font-size: 14px;
   color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
