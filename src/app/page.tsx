@@ -4,7 +4,6 @@ import { Footer } from "../components/Footer";
 import { Profile } from "../components/Profile";
 import { Skills } from "../components/Skills";
 import { Articles } from "../components/Articles";
-import { Works } from "../components/Works";
 import { Timeline } from "../components/Timeline";
 import styles from "./page.module.css";
 import { MdOutlineExpandMore } from "react-icons/md";
