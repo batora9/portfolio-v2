@@ -8,8 +8,8 @@
 }
 
 .image {
-  max-width: 96px;
-  max-height: 96px;
+  width: 96px;
+  height: 96px;
   background-color: transparent;
   margin-left: auto;
   margin: 0 !important;
