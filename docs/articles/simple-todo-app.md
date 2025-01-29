@@ -3,7 +3,6 @@ title: TODOアプリ
 createdAt: '2024-10-27'
 updatedAt: '2024-10-28'
 description: 'Web研究会で扱ったTODOアプリの改良を行いました'
-image: '/images/simple-todo-app/top.png'
 ---
 
 ---
