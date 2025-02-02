@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { MdKeyboardArrowRight } from 'react-icons/md';
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { MdHome } from "react-icons/md";
 import styles from './BreadCrumb.module.css';
 
 interface BreadCrumbProps {
@@ -10,7 +11,8 @@ interface BreadCrumbProps {
 export const BreadCrumb: React.FC<BreadCrumbProps> = ({ items }) => (
   <div className={styles.breadcrumb}>
     {items.map((item, index) => (
-      <span key={index}>
+      <span key={index} className={styles.item}>
+        {index === 0 && <MdHome className={styles.icon} />}
         <Link
           href={item.to}
           passHref
@@ -18,7 +20,7 @@ export const BreadCrumb: React.FC<BreadCrumbProps> = ({ items }) => (
         >
           {item.label}
         </Link>
-        {index < items.length - 1 && <span className={styles.icon}> <MdKeyboardArrowRight /> </span>}
+        {index < items.length - 1 && <MdOutlineKeyboardArrowRight className={styles.icon} />}
       </span>
     ))}
   </div>

@@ -1,13 +1,53 @@
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   list-style: none;
-  padding: 0;
+  padding: 10px 15px;
   margin: 20px 0;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.breadcrumb a:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  color: #0056b3;
+}
+
+.item {
+  display: contents;
 }
 
 .leaf {
   text-decoration: none;
   pointer-events: none;
-  color: #000;
+  color: #555;
+  font-weight: 600;
+}
+
+.icon {
+  display: inline;
+  margin: 0 8px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
 }
