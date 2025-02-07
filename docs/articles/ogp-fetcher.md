@@ -3,6 +3,7 @@ title: プロキシサーバー経由でOGPを取得してブログサイトで�
 createdAt: "2024-12-28"
 updatedAt: "2024-12-31"
 description: "自作OGP Fetcherを使ってOGPを取得し、Next.jsでMarkdownからHTMLに変換して表示する際にコンポーネントとして使う方法を紹介します。"
+published: true
 ---
 
 # やりたいこと

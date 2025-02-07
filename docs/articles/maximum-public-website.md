@@ -3,6 +3,7 @@ title: Maximum 公式サイト開発
 createdAt: '2024-04-15'
 updatedAt: '2024-07-17'
 description: '埼玉大学プログラミングサークル「Maximum」の公式サイトをリニューアルしました！'
+published: true
 ---
 
 # はじめに

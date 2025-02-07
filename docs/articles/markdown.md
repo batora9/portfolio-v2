@@ -3,6 +3,7 @@ title: ブログで使うMarkdown記法まとめ
 createdAt: '2023-01-05'
 updatedAt: '2024-07-10'
 description: 'batoran.comで今後使う/使いたいMarkdown記法をまとめました'
+published: true
 ---
 
 > 一部CSSで未実装な部分もあります(今後実装予定WIP)

@@ -3,6 +3,7 @@ title: 応用情報技術者試験を受験しました
 createdAt: "2024-10-16"
 updatedAt: "2024-10-16"
 description: "令和6年度秋期の応用情報技術者試験を受験しました。"
+published: true
 ---
 
 # きっかけ

@@ -3,6 +3,7 @@ title: ポートフォリオサイトをリニューアルしました！
 createdAt: '2024-07-16'
 updatedAt: '2024-07-16'
 description: 'Next.jsとCloudflare Pagesを使ってポートフォリオサイトをリニューアルしました'
+published: true
 ---
 
 # 経緯

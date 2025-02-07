@@ -3,6 +3,7 @@ title: Maximum AtCoder Leaderboardを作りました
 createdAt: '2024-10-30'
 updatedAt: '2025-01-29'
 description: 'Maximum部内のatcoder月間ランキングを表示するサイトを作成しました！'
+published: true
 ---
 
 ~~サイトは [こちら](#) から見ることができます。~~

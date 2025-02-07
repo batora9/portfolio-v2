@@ -3,6 +3,7 @@ title: 'VSCode上でMarkdown用のスニペットを作る'
 createdAt: '2024-03-05'
 updatedAt: '2024-03-05'
 description: 'Visual Studio CodeでMarkdown形式のファイルでスニペットを使えるようにする'
+published: true
 ---
 
 # きっかけ

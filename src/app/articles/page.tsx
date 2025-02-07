@@ -37,7 +37,7 @@ export default async function ArticlesPage() {
         />
         <h1>Articles</h1>
         <div className={styles.articlesList}>
-          {posts.map((post: Post) => (
+          {posts.filter(post => post.frontmatter.published).map((post: Post) => (
             <LinkCard
               key={post.slug}
               variant='article-link'

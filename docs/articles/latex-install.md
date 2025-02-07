@@ -3,6 +3,7 @@ title: Windows上で簡易的にLaTeXの環境を構築する
 createdAt: '2023-06-22'
 updatedAt: '2024-07-11'
 description: 'Windows上のVSCode環境でラクにLaTeX環境を構築できます。'
+published: true
 ---
 
 # はじめに
