@@ -25,9 +25,9 @@ export const MediaCard: React.FC<CardProps> = async ({
   const ogpJson = await ogpResponse.json();
   const ogp: OgpJson = ogpJson;
   return (
-    <Link href={href} className={styles.link}>
+    <Link href={href} className={style === 'centering' ? styles.centering : styles.left}>
       <div className={styles.card}>
-        <div className={clsx(styles.content, style === 'centering' ? styles.centering : '')}>
+        <div className={styles.content}>
           <p className={styles.title}>{ogp.title}</p>
           <p className={styles.description}>{ogp.description}</p>
           <p className={styles.href}>{href}</p>
