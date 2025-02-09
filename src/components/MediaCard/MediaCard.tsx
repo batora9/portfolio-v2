@@ -1,7 +1,6 @@
 import Link, { LinkProps } from 'next/link';
 import React from 'react';
 import styles from './MediaCard.module.css';
-import clsx from 'clsx';
 
 interface CardProps extends Omit<LinkProps, 'href'> {
   href: string;
