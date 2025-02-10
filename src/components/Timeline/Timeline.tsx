@@ -18,7 +18,7 @@ export const Timeline = () => {
     {
       title: "プログラミングサークルMaximumに入会",
       date: "2023-05",
-      description: "2024年度サークル副会長とWeb研究会の講師を務める",
+      description: "2024年度副会長, 2025年度会長とWeb研究会の講師を務める",
       icon: "/icons/maximum.png",
     },
     {
@@ -49,7 +49,7 @@ export const Timeline = () => {
             {item.icon ? (
               <img src={item.icon} alt="icon" />
             ) : (
-              <span className={styles.placeholder} />
+              <img src="./favicon.ico" alt="icon" />
             )}
           </div>
           <div className={styles.content}>
