@@ -54,16 +54,26 @@ const ogImage = $('meta[property="og:image"]').attr("content");
 
 あとはcheerioだけではちゃんと取得できてるか心配なので、これまでの脳筋metaタグ抽出法?と組み合わせてどちらかがOGPを取得できるようにしておきます。つまり二重チェックみたいなことです。
 
+このままでは例えばfaviconやOGP画像を取得した際に`./favicon`のように相対パスで取得されてしまうので、
+
 ```ts
+// ogFaviconがhttpから始まっていない場合、urlを付与する
+if (ogFavicon && !ogFavicon.match(/^http/)) {
+    ogFavicon = url + ogFavicon;
+}
+
+// ogImageがhttpから始まっていない場合、urlを付与する
+if (ogImage && !ogImage.match(/^http/)) {
+    ogImage = url + ogImage;
+}
+
 const result = {
     title: ogTitle || (titleMatch ? titleMatch[1] : null),
     description: ogDescription || (descriptionMatch ? descriptionMatch[1] : null),
-    favicon: ogFavicon || (faviconMatch ? faviconMatch[1] : null),
-    image: ogImage || (imageMatch ? imageMatch[1] : null),
+    favicon: ogFavicon || (faviconMatch ? url + faviconMatch[1] : null),
+    image: ogImage || (imageMatch ? url + imageMatch[1] : null)
 };
-
-return c.json(result);
 ```
 
-`null`が返却された場合はどうしようもないってことで...
+こうすると絶対パスとして取得できそう。
 
