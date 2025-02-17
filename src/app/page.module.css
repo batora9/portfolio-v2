@@ -50,6 +50,7 @@
   height: 110%;
   filter: blur(4px) brightness(0.7);
   object-fit: cover;
+  background-color: #000;
 }
 
 .heroItems {
