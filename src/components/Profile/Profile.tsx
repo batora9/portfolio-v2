@@ -9,7 +9,7 @@ export function Profile() {
           <p className={styles.name}>ばとら / Batora</p>
         </div>
         <div className={styles.profileText}>
-          <p>埼玉大学工学部情報工学科所属 B2のばとらです。</p>
+          <p>埼玉大学工学部情報工学科所属 3年のばとらです。</p>
           <p>小学生から趣味で野球とプログラミングを始め、高校時代まで硬式野球部に所属していました。部活での主将・副主将の経験を活かして主体性・多様性・協働性をモットーに活動しております。</p>
         </div>
         <div className={styles.profileText}>
