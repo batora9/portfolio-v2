@@ -4,8 +4,13 @@ export const Timeline = () => {
   // Timelineのデータ
   const data = [
     {
+      title: "応用情報技術者試験に合格",
+      date: "2025年4月",
+      description: "2025年度春季の応用情報技術者試験に合格しました",
+    },
+    {
       title: "株式会社リチェルカ",
-      date: "2025年2月-現在",
+      date: "2025年2月-\n2025年7月",
       description: "学生インターンとしてフルスタックで販売・仕入・在庫管理SCM SaaS『RECERQA』の開発に携わる",
       icon: "/icons/recerqa.png",
     },
