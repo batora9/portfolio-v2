@@ -20,9 +20,23 @@ export const MediaCard: React.FC<CardProps> = async ({
 }) => {
   // https://ogp-fetcher.batoran.com からogp情報をjson形式で取得
   const ogpUrl = `https://ogp-fetcher.batoran.com/?url=${href}`;
-  const ogpResponse = await fetch(ogpUrl);
-  const ogpJson = await ogpResponse.json();
-  const ogp: OgpJson = ogpJson;
+  const ogp = await fetch(ogpUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch OGP data');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error('Error fetching OGP data:', error);
+      return {
+        title: 'Error fetching OGP data',
+        description: '',
+        favicon: '',
+        image: '',
+      } as OgpJson; // デフォルト値を返す
+    });
+
   return (
     <Link href={href} className={style === 'centering' ? styles.centering : styles.left}>
       <div className={styles.card}>
