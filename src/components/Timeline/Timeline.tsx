@@ -4,6 +4,11 @@ export const Timeline = () => {
   // Timelineのデータ
   const data = [
     {
+      title: "ポケットサイン株式会社",
+      date: "2025年8月-\n現在",
+      icon: "/icons/pocketsign.webp",
+    },
+    {
       title: "応用情報技術者試験に合格",
       date: "2025年7月",
       description: "2025年度春季の応用情報技術者試験に合格しました",
