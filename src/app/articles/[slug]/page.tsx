@@ -10,8 +10,6 @@ import remarkHtml from "remark-html";
 import { Metadata } from "next";
 import remarkGfm from "remark-gfm";
 import rehypeReact from "rehype-react";
-// import remarkMath from 'remark-math';
-// import rehypeKatex from 'rehype-katex';
 import rehypePrettyCode from "rehype-pretty-code";
 import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
@@ -21,16 +19,73 @@ import { Footer } from "@/components/Footer";
 import { Paragraph } from "../../../../utils/Paragraph";
 import { jsx, jsxs } from "react/jsx-runtime";
 
-export const metadata: Metadata = {
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
-};
-
 interface Props {
   params: {
     work: string;
     slug: string;
   };
   searchParams: {};
+}
+
+// 動的メタデータ生成
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  
+  try {
+    // ファイルのパスを取得
+    const filePath = path.join(process.cwd(), "docs/articles", `${slug}.md`);
+    
+    // ファイルの中身を取得
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const { data } = matter(fileContents);
+    
+    const title = data.title || 'Untitled';
+    const description = data.description || 'ブログ記事';
+    const createdAt = data.createdAt;
+    
+    // OGP画像のURL生成（スラッグベース）
+    const baseUrl = process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}` 
+      : process.env.NODE_ENV === 'production'
+      ? 'https://batora.dev'
+      : 'http://localhost:3000';
+    
+    // 記事のメタデータをURLパラメータとして渡す
+    const ogImageUrl = `${baseUrl}/api/ogp/${slug}.png`;
+
+    return {
+      title,
+      description,
+      icons: [{ rel: "icon", url: "/favicon.ico" }],
+      openGraph: {
+        title,
+        description,
+        images: [
+          {
+            url: ogImageUrl,
+            width: 1200,
+            height: 630,
+            alt: title,
+          }
+        ],
+        type: 'article',
+        publishedTime: createdAt,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        images: [ogImageUrl],
+      },
+    };
+  } catch (error) {
+    console.error('メタデータ生成エラー:', error);
+    return {
+      title: 'ブログ記事',
+      description: 'batora.devのブログ記事',
+      icons: [{ rel: "icon", url: "/favicon.ico" }],
+    };
+  }
 }
 
 export async function generateStaticParams() {
@@ -65,9 +120,6 @@ export default async function ArticlePost({ params }: Props) {
     month: "long",
     day: "numeric",
   });
-
-  metadata.title = title; // ページのタイトルを記事のタイトルにする
-  metadata.description = data.description; // ページのディスクリプションを記事のディスクリプションにする
 
   const processedContent = await unified()
     .use(remarkParse)

@@ -4,13 +4,6 @@ import { SubHeader } from '@/components/SubHeader';
 import { getMarkdowns } from "../../../utils/markdown";
 import { Footer } from '@/components/Footer';
 import { BreadCrumb } from '@/components/BreadCrumb';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: '記事一覧',
-  description:
-    'ばとらの記事一覧ページです。技術記事や日記などを掲載しています。',
-};
 
 interface Post {
   slug: string;
