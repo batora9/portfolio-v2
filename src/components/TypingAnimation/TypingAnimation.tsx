@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-const TypingAnimation = ({ texts = [] as string[], typingSpeed = 100, deletingSpeed = 50, pauseTime = 1000 }) => {
+export const TypingAnimation = ({ texts = [] as string[], typingSpeed = 100, deletingSpeed = 50, pauseTime = 1000 }) => {
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,5 +46,3 @@ const TypingAnimation = ({ texts = [] as string[], typingSpeed = 100, deletingSp
     </div>
   );
 };
-
-export default TypingAnimation;

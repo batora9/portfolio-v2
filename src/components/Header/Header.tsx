@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import styles from "./Header.module.css";
@@ -47,5 +47,3 @@ export const Header = () => {
     </header>
   );
 };
-
-export default Header;

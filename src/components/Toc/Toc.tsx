@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect } from "react";
-import tocbot from "tocbot";
+import { useEffect } from "react";
+import * as tocbot from "tocbot";
 import styles from "./Toc.module.css";
 
 

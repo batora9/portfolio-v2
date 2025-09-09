@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import styles from "./SubHeader.module.css";
@@ -31,5 +31,3 @@ export const SubHeader = () => {
     </header>
   );
 };
-
-export default SubHeader;
