@@ -1,10 +1,16 @@
 ---
-title: ConnectRPCを使ったスキーマ駆動開発ハンズオン
+title: ConnectRPCを使ったスキーマ駆動開発をやってみた
 createdAt: '2025-09-07'
 updatedAt: '2025-10-11'
 description: '長期インターンでConnectRPCを使ったスキーマ駆動開発を経験したので、備忘録がてら記事にまとめてみました。'
 published: true
 ---
+
+8月から開始したスタートアップのインターン先で、バックエンド開発にprotobuf + ConnectRPCを採用していたため、初めてですがその知見をまとめようと思いました。
+
+# ConnectRPCとは
+
+Connectと呼ばれることが多いですが、
 
 # 実装してみる
 
