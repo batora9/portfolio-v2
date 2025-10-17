@@ -10,7 +10,21 @@ published: true
 
 # ConnectRPCとは
 
-Connectと呼ばれることが多いですが、
+ConnectRPCは、Protocol Buffersを使用した現代的なRPCフレームワークです。Buf Technologies社によって開発され、高いパフォーマンスとプロトコルの優位性が特徴的な次世代のAPIフレームワークとして注目されています。
+
+gRPCとの違い
+ConnectRPCはgRPCの進化形と位置づけられ、以下のような違いがあります：
+
+プロトコル対応 - gRPCはHTTP/2のみですが、ConnectRPCはHTTP/1.1も完全サポート
+ブラウザ対応 - gRPCはブラウザ直接利用が難しいが、ConnectRPCは標準対応
+シンプルさ - より直感的なAPIとシンプルな実装が特徴
+拡張性 - 柔軟なプラグインシステムによる機能拡張
+ConnectRPCの利点
+型安全なAPI開発 - コンパイル時にエラーを検出でき、ランタイムエラーを減らせる
+スキーマ駆動開発との相性 - 仕様を先に定義し、それに基づいてフロントエンドとバックエンドを並行開発できる
+高いパフォーマンス - バイナリフォーマットによる効率的なデータ転送
+API一貫性の担保 - クライアントとサーバーで同じスキーマを使用するため整合性が高い
+開発効率の向上 - コード生成によりボイラープレートコードの削減
 
 # 実装してみる
 
@@ -153,6 +167,47 @@ const server = http.createServer(adapter);
 server.listen(8080, () => {
   console.log("Server is running on http://localhost:8080");
 });
+```
+
+ミドルウェアを実装する際は`Interceptor`を使用します。
+
+ConnectRPCにおけるInterceptorは、RPCリクエストとレスポンスの処理フローを変更したり、追加の処理を挟み込んだりするための仕組みです。リクエストの前処理やレスポンスの後処理、エラーハンドリングなどを行うことができます。
+
+```ts
+const sampleInterceptor: Interceptor = (next) => async (req) => {
+  // リクエスト前の処理
+
+  const res = await next(req);
+
+  // レスポンス後の処理
+
+  return res;
+};
+```
+
+エラーハンドリング
+
+```ts
+throw new ConnectError('Invalid API key', Code.Unauthenticated);
+```
+
+Interceptorはサーバーやクライアントの初期化時に適用します。
+
+```ts
+// サーバー側
+const adapter = connectNodeAdapter({
+  routes,
+  interceptors: [authInterceptor, loggingInterceptor], // 例えば複数のInterceptorをチェーンできる
+});
+
+// クライアント側
+const client = createPromiseClient(
+  PostService,
+  createConnectTransport({
+    baseUrl: "http://localhost:8080",
+    interceptors: [authInterceptor],
+  })
+);
 ```
 
 ## APIキーの設定
